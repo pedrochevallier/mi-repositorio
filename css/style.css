@@ -1,0 +1,361 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*CSS que aplica a todas las paginas*/
+/*----------------------------------*/
+
+/*Barra de navegacion*/
+.nav-bar{
+    grid-area: nav;
+    background-color: #000;
+    height: 60px;
+    overflow: hidden;
+    display: flex;
+    align-content: stretch;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-bar a{
+    padding-left: 10px;
+}
+
+.nav-bar ul li{
+    display: inline;
+    padding-right: 10px; 
+}
+
+.nav-bar ul li a{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.footer-bar{
+    grid-area: footer;
+    background-color: #000;
+    height: 30px;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-bar ol li{
+    display: inline;
+}
+
+.footer-bar ol li a img{
+    height: 20px;
+    width: 20px;
+    padding-top: 3px;
+    padding-inline: 8px;
+}
+/*----------------------------------*/
+
+
+/*Contenido principal INDEX*/
+.grilla-index{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "nav nav nav nav"
+    "primeraSeccionimg primeraSeccionimg primeraSeccion primeraSeccion"
+    "segundaSeccion segundaSeccion segundaSeccionimg segundaSeccionimg"
+    "footer footer footer footer";
+    background-color: white;
+    color: black;
+}
+
+.primeraSeccionimg{
+    grid-area: primeraSeccionimg;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+.primeraSeccionimg img{
+    height: 300px;
+    width: auto;
+}
+
+.primeraSeccion{
+    grid-area: primeraSeccion;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.primeraSeccion span{
+    padding-right: 20px;
+}
+
+.segundaSeccion{
+    grid-area: segundaSeccion;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.segundaSeccion span{
+    padding-left: 20px;
+}
+
+.segundaSeccionimg{
+    grid-area: segundaSeccionimg;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+.segundaSeccionimg img{
+    height: 300px;
+    width: auto;
+}
+
+@media(max-width: 768px){
+    .grilla-index{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "nav"
+        "primeraSeccionimg"
+        "primeraSeccion"
+        "segundaSeccionimg"
+        "segundaSeccion"
+        "footer";
+    }
+    .nav-bar{
+        flex-direction: row;
+        height: auto;
+    }
+    .nav-bar ul li{
+        display: flex;
+        flex-direction: column;
+        padding-top: 10px; 
+    }
+    .primeraSeccionimg{
+        padding-bottom: 0;
+    }
+}
+
+/* Contenido principal PRODUCTOS*/
+.grilla-productos{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "nav nav"
+    "titulo titulo"
+    "producto1 producto2"
+    "producto3 producto4"
+    "footer footer";
+    background-color: white;
+    color: black;
+}
+
+.titulo{
+    grid-area: titulo;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+.producto1{
+    grid-area: producto1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+}
+.producto1 img{
+    width: 200px;
+    height: auto;
+}
+
+.producto2{
+    grid-area: producto2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+}
+.producto2 img{
+    width: 200px;
+    height: auto;
+}
+
+.producto3{
+    grid-area: producto3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+}
+.producto3 img{
+    width: 200px;
+    height: auto;
+}
+
+.producto4{
+    grid-area: producto4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+}
+.producto4 img{
+    width: 200px;
+    height: auto;
+}
+
+@media(max-width: 768px){
+    .grilla-productos{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "nav"
+        "titulo"
+        "producto1"
+        "producto2"
+        "producto3"
+        "producto4"
+        "footer";
+    }
+    .nav-bar{
+        flex-direction: row;
+        height: auto;
+    }
+    .nav-bar ul li{
+        display: flex;
+        flex-direction: column;
+        padding-top: 10px; 
+    }
+}
+
+/*-------------------------------*/
+
+/* Contenido principal SERVICIOS*/
+.servicios-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 82vh;
+    margin-top: 5rem;
+    background-image: url(../img/Coffee-Beans-PNG-Image.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.servicios-main table{
+    margin: 3rem;
+    width: 800px;
+    text-align: center;
+}
+.servicios-main p{
+    margin: 1rem;
+}
+.servicios-main table th,td{
+    border-bottom: 1px solid rgb(79, 44, 44);
+    height: 30px;
+}
+.servicios-main table tr{
+    border-bottom: 1px solid #ddd;
+    width: 8px;
+}
+.servicios-main button{
+    background-color: white;
+    border-radius: 5px;
+    border-width: 1px;
+    padding: 3px;
+}
+/*-------------------------------*/
+
+/* Contenido principal NOSOTROS*/
+
+.nosotros-main{
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    background-image: url(../img/nosotros70.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: rgb(0, 0, 0);
+}
+.nosotros-main img{
+    background-image: url(../img/nosotros1.jpg);
+    width: 70vw;
+    height: auto;
+    padding: 15px;
+}
+.nosotros-main h1{
+    padding: 15px;
+}
+.nosotros-main p{
+    width: 60vw;
+    padding-top: 20px;
+    font-size: 22px;
+    font-weight: 500;
+}
+/*-------------------------------*/
+
+/* Contenido principal CONTACTO*/
+.contactmain{
+    margin: 5rem 0 5rem 0;
+    margin-left: 25vw;
+    width: 50vw;
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+}
+.contacto-main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 3rem;
+    border: 1px solid #000;
+    border-radius: 10px;
+    justify-content: space-evenly;
+}
+.contacto-main input{
+    width: 15rem;
+    height: 25px;
+    border-radius: 5px;
+}
+.contacto-main p{
+    padding-top: 1rem;
+}
+.contacto-main textarea{
+    width: 15rem;
+    height: 100px;
+    border-radius: 5px;
+}
+.contacto-main input[type=checkbox]{
+    width: 15px;
+}
+.contacto-main p:nth-child(5){
+    align-items: center;
+}
+.contacto-main input[type=reset]{
+    padding: 2px;
+    margin: 5px;
+}
+.contacto-main input[type=submit]{
+    padding: 2px;
+    margin: 5px;
+}
+/*--------------------------------*/
